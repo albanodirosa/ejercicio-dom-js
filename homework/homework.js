@@ -1,6 +1,7 @@
 // Obtener la referencia de todos los divs en una constante llamada "divs".
 //Escriba aquí su código:
 
+const divs = document.querySelectorAll("div");
 
 /*
 Al obtener la referencia de los divs, usted podrá iterar estos mismos contenedores con métodos de javascript, cómo while o for.
@@ -13,5 +14,15 @@ Al obtener la referencia de los divs, usted podrá iterar estos mismos contenedo
 // Usted podría seleccionar cada elemento div, pero no tendría sentido si ya tenemos la referencia divs, aprovechar la iteración y realizar condicionales para obtener el resultado.
 //Escriba aquí su código:
 
+for (i = 0; i < divs.length; i++) {
+    divs[i].innerHTML = "box " + (i + 1);
+    if (i === 0) {
+        divs[i].style.color = "red";
+    } else if (i === 1) {
+        divs[i].style.color = "green";
+    } else {
+        divs[i].style.color = "blue";
+    }
+};
 
 
